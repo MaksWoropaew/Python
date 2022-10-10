@@ -12,7 +12,7 @@
 # Фредди Меркури 3
 # Денис Байцуров 4
 
-file = open("HomeWork4/file_1.txt", "r+", encoding="utf-8")
+file = open("Python/HomeWork4/file1.txt", "r+", encoding="utf-8")
 def get_number(input_string):
     '''
     Проверка ввода на число
