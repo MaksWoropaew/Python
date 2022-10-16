@@ -17,7 +17,6 @@ list_number_2 = []
 def fill_list_num_2(list_num, list_num_2):
     for i in list_num:
         if i in list_num_2:
-
             continue
         else:
             list_num_2.append(i)
