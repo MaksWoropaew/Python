@@ -9,7 +9,7 @@ def imp(list_of_data):
     """
     log.logger(f"Пишем данные {list_of_data} в файл txt", "")
 
-    with open('Seminar_8/Programmer/Telephone_base.txt', 'a', encoding="utf-8") as f:
+    with open('HomeWork8/Telephone_base.txt', 'a', encoding="utf-8") as f:
         f.write('\n\r')
         f.write('\n'.join(list_of_data))
 
@@ -19,7 +19,7 @@ def read_base():
     Эспорт данных из файла txt в виде списка списков
     '''
     log.logger(f"Читаем данные из файла txt", "")
-    with open('Seminar_8/Programmer/Telephone_base.txt', 'r', encoding='utf-8') as f:
+    with open('HomeWork8/Telephone_base.txt', 'r', encoding='utf-8') as f:
         lst = f.read().splitlines()
     result = []
     for i in range(int(len(lst)/6)+1):
@@ -32,7 +32,7 @@ def exp(text):
     Поиск и экспорт нужных данных
     """
     # text = input("Введите значение для поиска: ")
-    with open('Seminar_8/Programmer/Telephone_base.txt', 'r', encoding='utf-8') as f:
+    with open('HomeWork8/Telephone_base.txt', 'r', encoding='utf-8') as f:
         lst = f.read().splitlines()
         if text in lst[i]:
             temp = i % 6
@@ -49,7 +49,7 @@ def read_csv():
     '''
     log.logger(f"Читаем данные из файла csv", "")
 
-    with open('Seminar_8/Programmer/data.csv', newline='\n', encoding = 'utf-8') as File:  
+    with open('HomeWork8/data.csv', newline='\n', encoding = 'utf-8') as File:  
         reader = csv.reader(File, delimiter=',', lineterminator='\n')
         file_reader = []        
         for row in reader:
@@ -63,7 +63,7 @@ def write_csv(array):
     '''
     log.logger(f"Пишем данные {array} в файл csv", "")
 
-    with open('Seminar_8/Programmer/data.csv', mode ='a', encoding='utf-8') as file:
+    with open('HomeWork8/data.csv', mode ='a', encoding='utf-8') as file:
      
         file_writer = csv.writer(file, delimiter=',', lineterminator='\n')
         file_writer.writerow(array)
