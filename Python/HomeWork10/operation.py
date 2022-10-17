@@ -25,7 +25,7 @@ def output_list(update, _):
     '''
     Вывод списка из файла пользователю в телеграмм
     '''
-    with open('S10_P_ToDo.csv', 'r', encoding='utf-8') as csvfile:
+    with open('todolist.csv', 'r', encoding='utf-8') as csvfile:
         update.message.reply_text(csvfile.read())  
 
 
@@ -38,8 +38,8 @@ def contact_search(update, context):
     line = []
     count = 0
     try:
-        open('S10_P_ToDo.csv')
-        with open('S10_P_ToDo.csv', encoding='utf-8') as csvfile:
+        open('todolist.csv')
+        with open('todolist.csv', encoding='utf-8') as csvfile:
             file_reader = list(csv.reader(csvfile, delimiter=','))
             for row in file_reader:
                 if context.capitalize() in row:
